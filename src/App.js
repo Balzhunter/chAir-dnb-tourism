@@ -7,12 +7,12 @@ function App() {
     <div className="App">
       <Container prefix="center">
         <Container prefix="long-card">
-          <LongCard/>
-          <LongCard/>
-          <LongCard/>
-          <LongCard/>
-          <LongCard/>
-          <LongCard/>
+          <LongCard name="Bali" image_url="https://picsum.photos/id/1023/640" price="120.0" rating="4.6"/>
+          <LongCard name="Bali" image_url="https://picsum.photos/id/1038/640" price="120.0" rating="4.6"/>
+          <LongCard name="Bali" image_url="https://picsum.photos/id/1026/640" price="120.0" rating="4.6"/>
+          <LongCard name="Bali" image_url="https://picsum.photos/id/1021/640" price="120.0" rating="4.6"/>
+          <LongCard name="Bali" image_url="https://picsum.photos/id/1054/640" price="120.0" rating="4.6"/>
+          <LongCard name="Bali" image_url="https://picsum.photos/id/1058/640" price="120.0" rating="4.6"/>
         </Container>
       </Container>
     </div>
