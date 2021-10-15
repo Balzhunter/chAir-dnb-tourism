@@ -4,7 +4,7 @@ export function ExplorerButton({ children, source }) {
   return (
     <div className="explorer--container">
       <img className="explorer--img" src={source} />
-      <p className="explorer--title">{children}</p>
+      <a className="explorer--title" href = {`#${children}`}>{children}</a>
     </div>
   );
 }
