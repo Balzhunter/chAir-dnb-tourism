@@ -41,14 +41,11 @@ function App() {
               YOUR RESULTS FOR {searchResults.name.toUpperCase()}
             </h2>
           </Cover>
-<<<<<<< HEAD
           <SearchResults
             results={searchResults.data}
             quantity={searchResults.quantity}
+            parentUpdate={setSearchResults}
           ></SearchResults>
-=======
-          <SearchResults results={searchResults.data} quantity={searchResults.quantity} parentUpdate={setSearchResults}></SearchResults>
->>>>>>> cfbb434b38633eb63962480754069dda26a7fcf6
         </>
       ) : (
         <>
