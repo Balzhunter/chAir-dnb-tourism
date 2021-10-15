@@ -1,5 +1,5 @@
-import Form from "../form/Form";
 import "./Cover.css";
+import Form from "./Form";
 
 export default function Cover({ text }) {
   return (
@@ -9,7 +9,9 @@ export default function Cover({ text }) {
           <span className="isotipo">@</span> chairdnb
         </h1>
       </div>
-      {text ? <h1 className="text-optional">{text}</h1> : <Form></Form>}
+      <div className="container-cover ">
+        {text ? <h1 className="text-optional">{text}</h1> : <Form></Form>}
+      </div>
     </section>
   );
 }

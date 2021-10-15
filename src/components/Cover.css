@@ -3,7 +3,7 @@
 .cover {
   height: 750px;
   width: 100%;
-  background: url("../../static/images/cover-img.png") no-repeat center center
+  background: url("../static/images/cover-img.png") no-repeat center center
     local;
   background-size: cover;
   display: flex;
@@ -54,4 +54,7 @@
   text-align: left;
   color: white;
   text-align: center;
+}
+.container-cover {
+  max-width: 1208px;
 }

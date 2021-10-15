@@ -1,1 +1,0 @@
-import Cover from "./Cover";
