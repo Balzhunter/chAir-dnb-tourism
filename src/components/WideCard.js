@@ -10,8 +10,15 @@ export default function WideCard({
 }) {
   return (
     <div>
-      <div className="img-feature">
-        <img alt="img-feature" src={img} />
+      <div
+        className="img-feature"
+        style={{
+          backgroundImage: `url(${img}) `,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <p>{country}</p>
       </div>
       <div className="subtitle_feature">

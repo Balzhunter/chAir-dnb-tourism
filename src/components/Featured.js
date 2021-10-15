@@ -15,7 +15,7 @@ export default function Featured() {
   }, []);
   console.log(data);
   return (
-    <div>
+    <div className="my-88">
       <Container prefix="center">
         <h2 className="heading">Featured Chairdnb Plus Destinations</h2>
         <p className="discover-call--subtle">
@@ -23,7 +23,7 @@ export default function Featured() {
           activities, meals and accommodation included
         </p>
         <Container prefix="wide-card">
-          {data.map((feature) => (
+          {data.slice(0, 3).map((feature) => (
             <WideCard
               key={feature.name}
               country={feature.country}
