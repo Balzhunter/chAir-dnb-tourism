@@ -1,4 +1,4 @@
-export const validateResponse = (response) => {
+export const evaluateResponse = (response) => {
   if (response.ok) {
       const data = response.json();
       return data;

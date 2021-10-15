@@ -1,7 +1,7 @@
 import { BASE_URL } from "../constants";
-import { validateResponse } from "../utils/validate_response";
+import { evaluateResponse } from "../utils/evaluate_response";
 
 export const getAllPlaces = async () => {
   const response = await fetch(BASE_URL + "all");
-  return validateResponse(response);
+  return evaluateResponse(response);
 };
