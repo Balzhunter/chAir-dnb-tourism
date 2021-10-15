@@ -1,10 +1,12 @@
 import "./App.css";
 import { Adventures } from "./components/Adventures";
+import Cover from "./components/Cover";
 
 function App() {
   return (
     <div className="App">
-      <Adventures/>
+      <Cover></Cover>
+      <Adventures />
     </div>
   );
 }
