@@ -123,7 +123,7 @@ table {
   border-spacing: 0;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 .long-card__container {
   display: grid;
@@ -134,6 +134,7 @@ table {
   justify-content: space-between;
 
   grid-gap: 45px 0;
+  margin-bottom: 88px;
 }
 
 .center__container {
