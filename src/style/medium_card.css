@@ -1,0 +1,75 @@
+.medium-card__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 51px;
+}
+
+.medium-card {
+  width: 290px;
+}
+.medium-card__image {
+  width: 290px;
+  height: 200px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.medium-card__details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.medium-card__detail {
+  display: flex;
+  gap: 13px;
+}
+
+.medium-card__host {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 11.72px;
+  text-transform: uppercase;
+  color: #484848;
+  border: 1px solid #484848;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 8px;
+}
+
+.medium-card__name {
+  font-family: Roboto;
+  color: #767676;
+  font-size: 12px;
+  line-height: 14.06px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  width: 159px;
+}
+
+.medium-card__stars {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14.06px;
+  color: #484848;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.medium-card__icon {
+  width: 8px;
+  height: 8px;
+}
+
+.medium-card__price {
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 21px;
+  color: #484848;
+  margin-bottom: 32px;
+}
