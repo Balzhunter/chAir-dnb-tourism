@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import "./Form.css";
 
-export default function Form({data}) {
+export default function Form({data, parentUpdate}) {
   const [place, setPlace] = useState("");
-
 
   function search(e){
     e.preventDefault();
     console.log(data);
     const hasPlace = place.length > 0 ? data.filter((site) => site.name.toUpperCase().includes(place.toUpperCase()) || site.country.toUpperCase().includes(place.toUpperCase())) : data;
     console.log(hasPlace);
+    parentUpdate({data: hasPlace, name: place});
   };
 
   return (

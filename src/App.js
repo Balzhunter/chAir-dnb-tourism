@@ -16,6 +16,7 @@ import { getAllPlaces } from "./services/all_service";
 
 function App() {
   const [data, setData] = useState([]);
+  const [searchResults, setSearchResults] = useState(null);
 
   useEffect(() => {
     const fetchAll = async () => {
@@ -29,9 +30,18 @@ function App() {
 
   return (
     <>
-      <div className="App">
+      {searchResults !== null ? (
+        <>
+          <Cover>
+            <h2 className="results-title">YOUR RESULTS FOR {searchResults.name.toUpperCase()}</h2>
+          </Cover>
+        </>
+      )
+        :
+      (
+      <>
         <Cover>
-          <Form data={data}></Form>
+          <Form data={data} parentUpdate={setSearchResults}></Form>
         </Cover>
         <Container prefix="center">
           <ExplorerSection title="Explorer Chairdnb">
@@ -49,7 +59,9 @@ function App() {
         <Adventures />
         <Accommodations />
         <Experiences />
-      </div>
+      </>
+      )
+      }
     </>
   );
 }
