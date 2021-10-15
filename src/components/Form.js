@@ -22,8 +22,7 @@ export default function Form({data, parentUpdate}) {
     const {start, end} = e.target;
     const hasPlace = place.length > 0 ? data.filter((site) => site.name.toUpperCase().includes(place.toUpperCase()) || site.country.toUpperCase().includes(place.toUpperCase())) : data;
     const hasDate = dateFilter(hasPlace, start.value, end.value);
-
-    const days = (new Date(end.value) - new Date(start.value))/3600/24/1000 + 1;
+    const days = end.value === "" ? 1 : (new Date(end.value) - new Date(start.value))/3600/24/1000 + 1;
     parentUpdate({data: hasDate, name: place, quantity: developer, days: days});
   };
 
@@ -48,7 +47,7 @@ export default function Form({data, parentUpdate}) {
             <label className="label-form block">Departure</label>
             <input
               name="end"
-              className="input-form"
+              className="input-form js-end"
               type="text"
               placeholder="mm / dd / yyyy"
               onFocus={(e) => e.target.type = 'date'}

@@ -38,7 +38,7 @@ function App() {
           <Cover>
             <h2 className="results-title">YOUR RESULTS FOR {searchResults.name.toUpperCase()}</h2>
           </Cover>
-          <SearchResults results={searchResults.data} quantity={searchResults.quantity} parentUpdate={setSearchResults}></SearchResults>
+          <SearchResults results={searchResults.data} quantity={searchResults.quantity} days={searchResults.days} parentUpdate={setSearchResults}></SearchResults>
         </>
       )
         :

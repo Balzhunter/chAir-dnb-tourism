@@ -15,7 +15,7 @@ function MediumCard({name, image_url, price, rating }) {
           <p>{rating}</p>
         </div>
       </div>
-      <p className="medium-card__price">From {Math.round(price * 2)} € / person - 3 days</p>
+      <p className="medium-card__price">From {Math.round(price)} € / person - 3 days</p>
     </div>
   );
 }

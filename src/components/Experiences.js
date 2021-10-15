@@ -22,7 +22,7 @@ export function Experiences() {
         <h2 className="heading">Highly rated experiences</h2>
         <p className="subtitle">Multi-day extreme programming sessions organized by local experts with activities, meals and accommodation included</p>
         <Container prefix="long-card">
-          {experiences.map((experience) => <LongCard key={experience.name} name={experience.name} image_url={experience.image_url} price={experience.price} rating={experience.rating} />)}
+          {experiences.map((experience) => <LongCard key={experience.name} name={experience.name} image_url={experience.image_url} price={experience.price*3} rating={experience.rating} />)}
         </Container>
       </Container>
     </div>
