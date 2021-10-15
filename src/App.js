@@ -1,28 +1,32 @@
 import "./App.css";
-import LongCard from "./components/LongCard";
+import { Adventures } from "./components/Adventures";
+import { Cover } from "./components/Cover";
+import { ExplorerSection } from "./components/ExplorerSection"
+import { ExplorerButton } from "./components/ExplorerButton";
+import { CallToAction } from "./components/CallToAction";
+import accomodationb from "../src/static/images/accomodationb.png";
+import experienceb from "../src/static/images/experienceb.png"
+import adventureb from "../src/static/images/adventureb.png"
 import { Container } from "./components/Container";
 import { MediumCard } from "./components/MediumCard";
-
 
 function App() {
   return (
     <>
       <div className="App">
+        <Cover></Cover>
         <Container prefix="center">
-          <h2 className="heading">Discover Chairdnb adventures</h2>
-          <p className="subtitle">Multi-day hackatons organized by local experts with activities, meals and accommodation included</p>
-          <Container prefix="long-card">
-            <LongCard name="Bali" image_url="https://picsum.photos/id/1023/640" price="120.0" rating="4.6"/>
-            <LongCard name="Bali" image_url="https://picsum.photos/id/1038/640" price="120.0" rating="4.6"/>
-            <LongCard name="Bali" image_url="https://picsum.photos/id/1026/640" price="120.0" rating="4.6"/>
-            <LongCard name="Bali" image_url="https://picsum.photos/id/1021/640" price="120.0" rating="4.6"/>
-            <LongCard name="Bali" image_url="https://picsum.photos/id/1054/640" price="120.0" rating="4.6"/>
-            <LongCard name="Bali" image_url="https://picsum.photos/id/1058/640" price="120.0" rating="4.6"/>
-          </Container>
+          <ExplorerSection title = "Explorer Chairdnb">
+            <ExplorerButton source={accomodationb}>Accommodations</ExplorerButton>
+            <ExplorerButton source={experienceb}>Experiences</ExplorerButton>
+            <ExplorerButton source={adventureb}>Adventures</ExplorerButton>
+          </ExplorerSection>
+          <CallToAction title = "Chairdnb Plus accommodation" subtle = "A selection of accommodation verified according to quality and connectivity criteria" />
         </Container>
+        <Adventures />
       </div>
 
-      <section className="App">
+      <div className="App">
         <Container prefix="center">
           <h2 className="heading">Accommodation around the world</h2>
           <Container prefix="medium-card">
@@ -36,7 +40,7 @@ function App() {
             <MediumCard name="Tokyo" image_url="https://picsum.photos/id/1038/640" price="577.0" rating="4.96"/>
           </Container>
         </Container>
-      </section>  
+      </div>  
     </>
   );
 }
