@@ -3,13 +3,14 @@ import "./Form.css";
 
 export default function Form({data, parentUpdate}) {
   const [place, setPlace] = useState("");
+  const [developer, setDeveloper] = useState("");
 
   function search(e){
     e.preventDefault();
     console.log(data);
     const hasPlace = place.length > 0 ? data.filter((site) => site.name.toUpperCase().includes(place.toUpperCase()) || site.country.toUpperCase().includes(place.toUpperCase())) : data;
     console.log(hasPlace);
-    parentUpdate({data: hasPlace, name: place});
+    parentUpdate({data: hasPlace, name: place, quantity: developer});
   };
 
   return (
@@ -39,7 +40,7 @@ export default function Form({data, parentUpdate}) {
           </div>
         </div>
         <label className="label-form block">Developers</label>
-        <input className="input-form" type="text" placeholder="1" />
+        <input className="input-form" type="text" placeholder="1" onChange={(e) => setDeveloper(e.target.value)} value={developer} />
         <div className="btn-container">
           <button className="btn-form" type="submit">
             Search
