@@ -24,6 +24,7 @@ function App() {
     };
 
     fetchAll();
+    console.log("You fetch again")
   }, []);
 
   return (
