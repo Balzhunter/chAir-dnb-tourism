@@ -14,6 +14,7 @@
   align-items: center;
   background-color: #c4c4c4;
   background-blend-mode: multiply;
+  border-radius: 12px;
 }
 .my-88 {
   margin: 88px 0px;
