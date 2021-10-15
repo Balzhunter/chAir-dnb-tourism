@@ -1,6 +1,8 @@
 import "./Form.css";
 
-export default function Form() {
+export default function Form({data}) {
+  console.log(data);
+
   return (
     <div className="form_box">
       <h2>Book unique accommodations to code as never before</h2>

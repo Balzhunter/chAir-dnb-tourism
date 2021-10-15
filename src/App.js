@@ -10,12 +10,28 @@ import adventureb from "../src/static/images/adventureb.png";
 import { Container } from "./components/Container";
 import { Accommodations } from "./components/Accommodations";
 import { Experiences } from "./components/Experiences"
+import Form from "./components/Form";
+import { useEffect, useState } from "react";
+import { getAllPlaces } from "./services/all_service";
 
 function App() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchAll = async () => {
+      const places = await getAllPlaces();
+      setData(places);
+    };
+
+    fetchAll();
+  }, []);
+
   return (
     <>
       <div className="App">
-        <Cover></Cover>
+        <Cover>
+          <Form data={data}></Form>
+        </Cover>
         <Container prefix="center">
           <ExplorerSection title="Explorer Chairdnb">
             <ExplorerButton source={accomodationb}>
