@@ -56,5 +56,6 @@
   text-align: center;
 }
 .container-cover {
-  max-width: 1208px;
+  width: 1208px;
+  margin: 0 auto;
 }

@@ -13,6 +13,7 @@ import { Experiences } from "./components/Experiences"
 import Form from "./components/Form";
 import { useEffect, useState } from "react";
 import { getAllPlaces } from "./services/all_service";
+import { SearchResults } from "./components/SearchResults";
 
 function App() {
   const [data, setData] = useState([]);
@@ -35,6 +36,7 @@ function App() {
           <Cover>
             <h2 className="results-title">YOUR RESULTS FOR {searchResults.name.toUpperCase()}</h2>
           </Cover>
+          <SearchResults results={searchResults.data}></SearchResults>
         </>
       )
         :
