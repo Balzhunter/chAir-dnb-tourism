@@ -1,5 +1,6 @@
 import "./App.css";
 import { Adventures } from "./components/Adventures";
+import { Cover } from "./components/Cover";
 
 function App() {
   return (
