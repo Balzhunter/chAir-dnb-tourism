@@ -4,7 +4,6 @@ import { Cover } from "./components/Cover";
 import { ExplorerSection } from "./components/ExplorerSection";
 import { ExplorerButton } from "./components/ExplorerButton";
 import { CallToAction } from "./components/CallToAction";
-import Featured from "./components/Featured";
 import accomodationb from "../src/static/images/accomodationb.png";
 import experienceb from "../src/static/images/experienceb.png";
 import adventureb from "../src/static/images/adventureb.png";
@@ -15,6 +14,7 @@ import Form from "./components/Form";
 import { useEffect, useState } from "react";
 import { getAllPlaces } from "./services/all_service";
 import { SearchResults } from "./components/SearchResults";
+import Featured from "./components/Featured";
 
 function App() {
   const [data, setData] = useState([]);
