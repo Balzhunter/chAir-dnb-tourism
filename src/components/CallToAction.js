@@ -8,9 +8,9 @@ export function CallToAction({ title, subtle }) {
       <p className="discover-call--subtle">{subtle}</p>
       <div className="discover-call--container">
         <p className="discover-call--char">@</p>
-        <button className="discover-call--button">
+        <a className="discover-call--button" href = "#Accommodations">
           Discover accommodations<img src = {disclogo} />
-        </button>
+        </a>
       </div>
     </div>
   );
