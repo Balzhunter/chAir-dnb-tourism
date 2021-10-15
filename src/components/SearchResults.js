@@ -2,12 +2,14 @@ import { LongCard } from "./LongCard";
 import { Container } from "./Container";
 import { useEffect } from "react";
 
-export function SearchResults({results, quantity, parentUpdate}) {
+export function SearchResults({results, quantity, parentUpdate, days}) {
 
   useEffect(() => {
     document.querySelector('.cover').querySelector("h1").addEventListener('click', () => {
       parentUpdate(null)})
   }, [])
+
+  console.log(days);
 
   return (
     <div className="adventures mt-38" id = "Adventures">

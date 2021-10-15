@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Form.css";
 
 export default function Form({data, parentUpdate}) {
@@ -20,12 +20,11 @@ export default function Form({data, parentUpdate}) {
   function search(e){
     e.preventDefault();
     const {start, end} = e.target;
-    console.log(start.value, end.value)
-    console.log(data);
     const hasPlace = place.length > 0 ? data.filter((site) => site.name.toUpperCase().includes(place.toUpperCase()) || site.country.toUpperCase().includes(place.toUpperCase())) : data;
     const hasDate = dateFilter(hasPlace, start.value, end.value);
-    console.log(hasDate);
-    parentUpdate({data: hasDate, name: place, quantity: developer});
+
+    const days = (new Date(end.value) - new Date(start.value))/3600/24/1000 + 1;
+    parentUpdate({data: hasDate, name: place, quantity: developer, days: days});
   };
 
   return (
