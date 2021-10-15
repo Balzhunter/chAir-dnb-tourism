@@ -21,7 +21,7 @@ export function Accommodations() {
         <Container prefix="center">
           <h2 className="heading">Accommodation around the world</h2>
           <Container prefix="medium-card">
-            {accommodations.map((accommodation) => <MediumCard key={accommodation.name} name={accommodation.name} image_url={accommodation.image_url} price={accommodation.price} rating={accommodation.rating} />)}
+            {accommodations.map((accommodation) => <MediumCard key={accommodation.name} name={accommodation.name} image_url={accommodation.image_url} price={accommodation.price*3} rating={accommodation.rating} />)}
           </Container>
         </Container>
       </div>
