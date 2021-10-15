@@ -1,7 +1,7 @@
 import "./WideCard.css";
 
 export default function WideCard({
-  country,
+  title,
   verified_stays,
   price,
   start_date,
@@ -19,7 +19,7 @@ export default function WideCard({
           backgroundRepeat: "no-repeat",
         }}
       >
-        <p>{country}</p>
+        <p>{title}</p>
       </div>
       <div className="subtitle_feature">
         <h3>More than {verified_stays} verified stays</h3>

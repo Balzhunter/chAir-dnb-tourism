@@ -44,6 +44,7 @@ function App() {
           <SearchResults
             results={searchResults.data}
             quantity={searchResults.quantity}
+            days={searchResults.days}
             parentUpdate={setSearchResults}
           ></SearchResults>
         </>

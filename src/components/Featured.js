@@ -26,7 +26,7 @@ export default function Featured() {
           {data.slice(0, 3).map((feature) => (
             <WideCard
               key={feature.name}
-              country={feature.country}
+              title="@"
               verified_stays={feature.verified_stays}
               price={feature.price}
               start_date={feature.start_date}
