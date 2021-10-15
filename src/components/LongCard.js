@@ -2,7 +2,7 @@ import React from 'react';
 import "./LongCard.css";
 import star from "../static/images/star.svg"
 
-function LongCard({name, image_url, price, rating }) {
+export function LongCard({name, image_url, price, rating }) {
   return (
     <div className="long-card">
       <img className="long-card__image" src={image_url} />
@@ -16,5 +16,3 @@ function LongCard({name, image_url, price, rating }) {
     </div>
   );
 }
-
-export default LongCard;
