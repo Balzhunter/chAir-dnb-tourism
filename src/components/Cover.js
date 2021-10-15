@@ -1,7 +1,7 @@
 import "./Cover.css";
 import Form from "./Form";
 
-export default function Cover({ text }) {
+export function Cover({ text }) {
   return (
     <section className="cover ">
       <div className="absolute">
