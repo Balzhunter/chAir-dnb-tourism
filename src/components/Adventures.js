@@ -22,7 +22,7 @@ export function Adventures() {
         <h2 className="heading">Discover Chairdnb adventures</h2>
         <p className="subtitle">Multi-day hackatons organized by local experts with activities, meals and accommodation included</p>
         <Container prefix="long-card">
-          {adventures.map((adventure) => <LongCard key={adventure.name} name={adventure.name} image_url={adventure.image_url} price={adventure.price} rating={adventure.rating} />)}
+          {adventures.map((adventure) => <LongCard key={adventure.name} name={adventure.name} image_url={adventure.image_url} price={adventure.price*3} rating={adventure.rating} />)}
         </Container>
       </Container>
     </div>

@@ -10,12 +10,43 @@ import adventureb from "../src/static/images/adventureb.png";
 import { Container } from "./components/Container";
 import { Accommodations } from "./components/Accommodations";
 import { Experiences } from "./components/Experiences"
+import Form from "./components/Form";
+import { useEffect, useState } from "react";
+import { getAllPlaces } from "./services/all_service";
+import { SearchResults } from "./components/SearchResults";
 
 function App() {
+  const [data, setData] = useState([]);
+  const [searchResults, setSearchResults] = useState(null);
+
+  useEffect(() => {
+    const fetchAll = async () => {
+      const places = await getAllPlaces();
+      setData(places);
+    };
+
+    fetchAll();
+    console.log("You fetch again")
+  }, []);
+
+  console.log(searchResults);
+
   return (
     <>
-      <div className="App">
-        <Cover></Cover>
+      {searchResults !== null ? (
+        <>
+          <Cover>
+            <h2 className="results-title">YOUR RESULTS FOR {searchResults.name.toUpperCase()}</h2>
+          </Cover>
+          <SearchResults results={searchResults.data} quantity={searchResults.quantity}></SearchResults>
+        </>
+      )
+        :
+      (
+      <>
+        <Cover>
+          <Form data={data} parentUpdate={setSearchResults}></Form>
+        </Cover>
         <Container prefix="center">
           <ExplorerSection title="Explorer Chairdnb">
             <ExplorerButton source={accomodationb}>
@@ -32,7 +63,9 @@ function App() {
         <Adventures />
         <Accommodations />
         <Experiences />
-      </div>
+      </>
+      )
+      }
     </>
   );
 }

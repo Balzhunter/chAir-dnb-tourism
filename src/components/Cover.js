@@ -1,7 +1,6 @@
 import "./Cover.css";
-import Form from "./Form";
 
-export function Cover({ text }) {
+export function Cover({ text, children }) {
   return (
     <section className="cover ">
       <div className="absolute">
@@ -10,7 +9,7 @@ export function Cover({ text }) {
         </h1>
       </div>
       <div className="container-cover ">
-        {text ? <h1 className="text-optional">{text}</h1> : <Form></Form>}
+        {text ? <h1 className="text-optional">{text}</h1> : children}
       </div>
     </section>
   );
