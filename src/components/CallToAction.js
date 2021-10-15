@@ -1,5 +1,5 @@
 import "./CallToAction.css";
-import disclogo from "./disclogo.svg"
+import disclogo from "../static/images/disclogo.svg"
 
 export function CallToAction({ title, subtle }) {
   return (

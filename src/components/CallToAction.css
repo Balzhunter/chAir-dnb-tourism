@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: baseline;
+  margin-top: 88px;
 }
 
 .discover-call--title {
@@ -13,6 +14,7 @@
   font-size: 24px;
   line-height: 28px;
   color: #484848;
+  margin-bottom: 8px;
 }
 
 .discover-call--subtle {
@@ -22,11 +24,12 @@
   font-size: 16px;
   line-height: 19px;
   color: #484848;
+  margin-bottom: 24px;
 }
 
 .discover-call--container {
   width: 1206px;
-  background-image: url(./discoveracc.png);
+  background-image: url(../static/images/discoveracc.png);
   background-size: 100% 100%;
   display: flex;
   flex-direction: column;

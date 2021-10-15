@@ -1,12 +1,12 @@
 import logo from "./logo.svg";
-import accomodationb from "./accomodationb.png";
-import experienceb from "./experienceb.png"
-import adventureb from "./adventureb.png"
+import accomodationb from "../src/static/images/accomodationb.png";
+import experienceb from "../src/static/images/experienceb.png"
+import adventureb from "../src/static/images/adventureb.png"
 
 import "./App.css";
-import { ExplorerSection } from "./ExplorerSection"
-import { ExplorerButton } from "./ExplorerButton";
-import { CallToAction } from "./CallToAction"
+import { ExplorerSection } from "./components/ExplorerSection"
+import { ExplorerButton } from "./components/ExplorerButton";
+import { CallToAction } from "./components/CallToAction"
 
 function App() {
   return (
