@@ -123,7 +123,7 @@ table {
   border-spacing: 0;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -170,4 +170,8 @@ a{
 }
 * {
   box-sizing: border-box;
+}
+
+.mt-38{
+  margin-top: 38px;
 }

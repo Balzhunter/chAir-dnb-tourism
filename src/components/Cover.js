@@ -1,4 +1,5 @@
 import "./Cover.css";
+import React from 'react'
 
 export function Cover({ text, children }) {
   return (

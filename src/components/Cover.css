@@ -23,6 +23,9 @@
   letter-spacing: 0em;
   text-align: left;
 }
+.name-logo:hover{
+  cursor: pointer;
+}
 .isotipo {
   font-family: Roboto;
   font-size: 18px;
