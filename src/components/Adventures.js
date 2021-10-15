@@ -17,7 +17,7 @@ export function Adventures() {
   }, [])
 
   return (
-    <div className="adventures">
+    <div className="adventures" id = "Adventures">
       <Container prefix="center">
         <h2 className="heading">Discover Chairdnb adventures</h2>
         <p className="subtitle">Multi-day hackatons organized by local experts with activities, meals and accommodation included</p>
