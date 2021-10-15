@@ -1,0 +1,41 @@
+import { useEffect, useState } from "react";
+import { getAllFeatured } from "../services/featured_service";
+import { Container } from "./Container";
+import WideCard from "./WideCard";
+
+export default function Featured() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function getData() {
+      const featured_data = await getAllFeatured();
+      setData(featured_data);
+    }
+    getData();
+  }, []);
+  console.log(data);
+  return (
+    <div>
+      <Container prefix="center">
+        <h2 className="heading">Featured Chairdnb Plus Destinations</h2>
+        <p className="discover-call--subtle">
+          Multi-day pair programming sessions organized by local experts with
+          activities, meals and accommodation included
+        </p>
+        <Container prefix="wide-card">
+          {data.map((feature) => (
+            <WideCard
+              key={feature.name}
+              country={feature.country}
+              verified_stays={feature.verified_stays}
+              price={feature.price}
+              start_date={feature.start_date}
+              end_date={feature.end_date}
+              img={feature.image_url}
+            />
+          ))}
+        </Container>
+      </Container>
+    </div>
+  );
+}
