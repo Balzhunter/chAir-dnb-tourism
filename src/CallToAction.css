@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+.discover-call{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.discover-call--title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #484848;
+}
+
+.discover-call--subtle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #484848;
+}
+
+.discover-call--container {
+  width: 1206px;
+  background-image: url(./discoveracc.png);
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 39px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 36px;
+  padding-bottom: 50px;
+}
+
+.discover-call--char {
+  margin: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 120px;
+  line-height: 141px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.discover-call--button {
+  border-style: none;
+  width: 200px;
+  height: 44px;
+  border-radius: 4px;
+  background: #ffffff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+
+  color: #484848;
+}

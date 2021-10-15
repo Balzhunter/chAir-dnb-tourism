@@ -1,5 +1,12 @@
 import logo from "./logo.svg";
+import accomodationb from "./accomodationb.png";
+import experienceb from "./experienceb.png"
+import adventureb from "./adventureb.png"
+
 import "./App.css";
+import { ExplorerSection } from "./ExplorerSection"
+import { ExplorerButton } from "./ExplorerButton";
+import { CallToAction } from "./CallToAction"
 
 function App() {
   return (
@@ -18,6 +25,13 @@ function App() {
           Learn React 123
         </a>
       </header>
+      <ExplorerSection title = "Explorer Chairdnb">
+        <ExplorerButton source={accomodationb}>Accommodations</ExplorerButton>
+        <ExplorerButton source={experienceb}>Experiences</ExplorerButton>
+        <ExplorerButton source={adventureb}>Adventures</ExplorerButton>
+      </ExplorerSection>
+
+      <CallToAction title = "Chairdnb Plus accommodation" subtle = "A selection of accommodation verified according to quality and connectivity criteria" />
     </div>
   );
 }
