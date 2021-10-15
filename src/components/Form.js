@@ -15,7 +15,8 @@ export default function Form({data}) {
             <input
               className="input-form"
               type="text"
-              placeholder="dd / mm / yyyy"
+              placeholder="mm / dd / yyyy"
+              onFocus={(e) => e.target.type = 'date'}
             />
           </div>
           <div>
@@ -23,7 +24,8 @@ export default function Form({data}) {
             <input
               className="input-form"
               type="text"
-              placeholder="dd / mm / yyyy"
+              placeholder="mm / dd / yyyy"
+              onFocus={(e) => e.target.type = 'date'}
             />
           </div>
         </div>
