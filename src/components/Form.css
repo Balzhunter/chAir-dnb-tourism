@@ -66,3 +66,14 @@
   color: white;
   border-radius: 4px;
 }
+.btn-form:hover{
+  cursor: pointer;
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 18px;
+}
+input[type="date"]{
+  width: 172px;
+  padding: 12px;
+}
