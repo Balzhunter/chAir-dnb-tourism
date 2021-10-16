@@ -79,4 +79,8 @@
   .discover-call--title, .discover-call--subtle{
     text-align: center;
   }
+  .discover-call{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }

@@ -15,7 +15,7 @@
   background-blend-mode: multiply;
   border-radius: 12px;
 }
-.my-88 {
+.featured__container {
   margin: 88px 0px;
 }
 
@@ -56,5 +56,8 @@
 @media only screen and (max-width: 640px) {
   .wide-card__container{
     grid-template-columns: repeat(1, 1fr);
+  }
+  .featured__container {
+    margin: 40px 0px;
   }
 }

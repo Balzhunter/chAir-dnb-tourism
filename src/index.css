@@ -226,6 +226,7 @@ a {
   .long-card__container{
     grid-template-columns: repeat(1, 188px);
     justify-content: space-around;
+    margin-bottom: 40px;
   }
   .main__container {
     padding: 20px;

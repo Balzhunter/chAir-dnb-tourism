@@ -26,7 +26,7 @@ export default function Featured() {
   }, [])
 
   return (
-    <div className="my-88">
+    <Container prefix="featured">
       <Container prefix="center">
         <h2 className="heading">Featured Chairdnb Plus Destinations</h2>
         <p className="discover-call--subtle">
@@ -47,6 +47,6 @@ export default function Featured() {
           ))}
         </Container>
       </Container>
-    </div>
+    </Container>
   );
 }
