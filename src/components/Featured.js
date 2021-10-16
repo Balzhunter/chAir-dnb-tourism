@@ -13,7 +13,7 @@ export default function Featured() {
     }
     getData();
   }, []);
-  console.log(data);
+
   return (
     <div className="my-88">
       <Container prefix="center">
