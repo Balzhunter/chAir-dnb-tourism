@@ -76,3 +76,13 @@ input[type="date"]{
   width: 172px;
   padding: 12px;
 }
+
+@media only screen and (max-width: 640px) {
+  .date__inputs{
+    flex-direction: column;
+    gap: 16px;
+  }
+  input[type="date"]{
+    width: 100%;
+  }
+}

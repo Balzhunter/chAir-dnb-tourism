@@ -30,16 +30,18 @@ export default function Form({data, parentUpdate}) {
     <div className="form_box">
       <h2>Book unique accommodations to code as never before</h2>
       <form className="form" onSubmit={search} action="#">
-        <label className="label-form block">Where</label>
-        <input className="input-form" type="text" placeholder="Everywhere" onChange={(e) => setPlace(e.target.value)} value={place}/>
-        <div className="flex">
-          <div className="">
+        <div>
+          <label className="label-form block">Where</label>
+          <input className="input-form" type="text" placeholder="Everywhere" onChange={(e) => setPlace(e.target.value)} value={place}/>
+        </div>
+        <div className="flex date__inputs">
+          <div>
             <label className="label-form block">Arrival</label>
             <input
               name="start"
               className="input-form"
               type="text"
-              placeholder="mm / dd / yyyy"
+              placeholder="dd / mm / yyyy"
               onFocus={(e) => e.target.type = 'date'}
             />
           </div>
@@ -49,13 +51,15 @@ export default function Form({data, parentUpdate}) {
               name="end"
               className="input-form js-end"
               type="text"
-              placeholder="mm / dd / yyyy"
+              placeholder="dd / mm / yyyy"
               onFocus={(e) => e.target.type = 'date'}
             />
           </div>
         </div>
-        <label className="label-form block">Developers</label>
-        <input className="input-form" type="text" placeholder="1" onChange={(e) => setDeveloper(e.target.value)} value={developer} />
+        <div>
+          <label className="label-form block">Developers</label>
+          <input className="input-form" type="text" placeholder="1" onChange={(e) => setDeveloper(e.target.value)} value={developer} />
+        </div>
         <div className="btn-container">
           <button className="btn-form" type="submit">
             Search
