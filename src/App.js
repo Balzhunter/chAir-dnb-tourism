@@ -38,35 +38,39 @@ function App() {
               YOUR RESULTS FOR {searchResults.name.toUpperCase()}
             </h2>
           </Cover>
-          <SearchResults
-            results={searchResults.data}
-            quantity={searchResults.quantity}
-            days={searchResults.days}
-            parentUpdate={setSearchResults}
-          ></SearchResults>
+          <Container prefix="main">
+            <SearchResults
+              results={searchResults.data}
+              quantity={searchResults.quantity}
+              days={searchResults.days}
+              parentUpdate={setSearchResults}
+            ></SearchResults>
+          </Container>
         </>
       ) : (
         <>
           <Cover>
             <Form data={data} parentUpdate={setSearchResults}></Form>
           </Cover>
-          <Container prefix="center">
-            <ExplorerSection title="Explorer Chairdnb">
-              <ExplorerButton source={accomodationb}>
-                Accommodations
-              </ExplorerButton>
-              <ExplorerButton source={experienceb}>Experiences</ExplorerButton>
-              <ExplorerButton source={adventureb}>Adventures</ExplorerButton>
-            </ExplorerSection>
-            <CallToAction
-              title="Chairdnb Plus accommodation"
-              subtle="A selection of accommodation verified according to quality and connectivity criteria"
-            />
+          <Container prefix="main">
+            <Container prefix="center">
+              <ExplorerSection title="Explorer Chairdnb">
+                <ExplorerButton source={accomodationb}>
+                  Accommodations
+                </ExplorerButton>
+                <ExplorerButton source={experienceb}>Experiences</ExplorerButton>
+                <ExplorerButton source={adventureb}>Adventures</ExplorerButton>
+              </ExplorerSection>
+              <CallToAction
+                title="Chairdnb Plus accommodation"
+                subtle="A selection of accommodation verified according to quality and connectivity criteria"
+              />
+            </Container>
+            <Adventures />
+            <Accommodations />
+            <Experiences />
+            <Featured></Featured>
           </Container>
-          <Adventures />
-          <Accommodations />
-          <Experiences />
-          <Featured></Featured>
         </>
       )}
     </>
