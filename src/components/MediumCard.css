@@ -1,6 +1,14 @@
 .medium-card__container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-columns: repeat(4, 290px);
+
+  align-content: space-around;
+  justify-content: space-between;
+
+  grid-gap: 45px 0;
+  margin-bottom: 88px;
+
   margin-top: 51px;
   gap: 16px;
 }
@@ -73,4 +81,18 @@
   line-height: 21px;
   color: #484848;
   margin-bottom: 32px;
+}
+@media only screen and (max-width: 1220px) {
+  .medium-card__container{
+    grid-template-columns: repeat(2, 290px);
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .medium-card__container{
+    grid-template-columns: repeat(1, 290px);
+    margin-bottom: 40px;
+    margin-top: 25px;
+  }
 }

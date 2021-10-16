@@ -12,7 +12,7 @@ function MediumCard({name, image_url, price, rating }) {
         </div>
         <div className="medium-card__stars">
           <img className="medium-card__icon" src={pink_star} alt="Star icon"/>
-          <p>{rating}</p>
+          <p>{rating.toFixed(1)}</p>
         </div>
       </div>
       <p className="medium-card__price">From {Math.round(price)} € / person - 3 days</p>

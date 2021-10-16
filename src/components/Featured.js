@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { getAllFeatured } from "../services/featured_service";
 import { Container } from "./Container";
 import WideCard from "./WideCard";
+import { filterArrays } from "../utils/array_filter";
 
 export default function Featured() {
   const [data, setData] = useState([]);
+  const [initial, setInitial] = useState(0);
 
   useEffect(() => {
     async function getData() {
@@ -13,9 +15,18 @@ export default function Featured() {
     }
     getData();
   }, []);
-  console.log(data);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const leng = 5;
+      const rate = 3;
+      setInitial(initial => (leng > initial + rate) ? (initial + rate) : (initial + rate - leng));
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [])
+
   return (
-    <div className="my-88">
+    <Container prefix="featured">
       <Container prefix="center">
         <h2 className="heading">Featured Chairdnb Plus Destinations</h2>
         <p className="discover-call--subtle">
@@ -23,7 +34,7 @@ export default function Featured() {
           activities, meals and accommodation included
         </p>
         <Container prefix="wide-card">
-          {data.slice(0, 3).map((feature) => (
+          {filterArrays(data, 3, initial).map((feature) => (
             <WideCard
               key={feature.name}
               title="@"
@@ -36,6 +47,6 @@ export default function Featured() {
           ))}
         </Container>
       </Container>
-    </div>
+    </Container>
   );
 }

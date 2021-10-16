@@ -3,7 +3,6 @@
   grid-template-columns: repeat(3, 1fr);
   margin-top: 32px;
   grid-gap: 16px;
-  gap: 16px;
 }
 .img-feature {
   padding: 10px;
@@ -16,7 +15,7 @@
   background-blend-mode: multiply;
   border-radius: 12px;
 }
-.my-88 {
+.featured__container {
   margin: 88px 0px;
 }
 
@@ -52,4 +51,13 @@
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+@media only screen and (max-width: 640px) {
+  .wide-card__container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .featured__container {
+    margin: 40px 0px;
+  }
 }

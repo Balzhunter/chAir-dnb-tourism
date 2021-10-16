@@ -29,7 +29,8 @@
 }
 
 .discover-call--container {
-  width: 1206px;
+  max-width: 1206px;
+  width: 100%;
   background-image: url(../static/images/discoveracc.png);
   background-size: 100% 100%;
   display: flex;
@@ -72,4 +73,14 @@
   gap: 13px;
 
   color: #484848;
+}
+
+@media only screen and (max-width: 680px) {
+  .discover-call--title, .discover-call--subtle{
+    text-align: center;
+  }
+  .discover-call{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }
