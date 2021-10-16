@@ -27,10 +27,7 @@ function App() {
     };
 
     fetchAll();
-    console.log("You fetch again");
   }, []);
-
-  console.log(searchResults);
 
   return (
     <>
