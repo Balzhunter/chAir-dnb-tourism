@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 .explorer--buttons {
   display: grid;
-  grid-gap: 16px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 281px);
+
+  align-content: space-around;
+  justify-content: space-between;
+
+  grid-gap: 16px 0;
+  margin-bottom: 88px;
+  margin-top: 51px;
 }
 
 .main-title{
@@ -14,4 +20,16 @@
   color: #484848;
   margin-bottom: 24px;
   margin-top: 88px;
+}
+
+@media only screen and (max-width: 900px) {
+  .explorer--buttons{
+    grid-template-columns: repeat(2, 281px);
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .explorer--buttons{
+    grid-template-columns: repeat(1, 281px);
+  }
 }
