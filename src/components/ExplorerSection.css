@@ -28,8 +28,11 @@
   }
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 680px) {
   .explorer--buttons{
-    grid-template-columns: repeat(1, 281px);
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .main-title{
+    text-align: center;
   }
 }

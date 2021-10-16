@@ -3,7 +3,6 @@
   grid-template-columns: repeat(3, 1fr);
   margin-top: 32px;
   grid-gap: 16px;
-  gap: 16px;
 }
 .img-feature {
   padding: 10px;
@@ -52,4 +51,10 @@
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+@media only screen and (max-width: 640px) {
+  .wide-card__container{
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

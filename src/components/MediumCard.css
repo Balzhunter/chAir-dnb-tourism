@@ -85,5 +85,14 @@
 @media only screen and (max-width: 1220px) {
   .medium-card__container{
     grid-template-columns: repeat(2, 290px);
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .medium-card__container{
+    grid-template-columns: repeat(1, 290px);
+    margin-bottom: 40px;
+    margin-top: 25px;
   }
 }
