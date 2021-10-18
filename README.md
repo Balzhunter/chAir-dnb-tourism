@@ -1,3 +1,9 @@
+# You can watch the preview of this project here:
+
+[ChairDnB](https://chair-dnb-balvir.netlify.app/)
+
+Thank you for visiting, enjoy it.
+
 # Getting Started with the Docker Image
 
 ## Build the attached Docker image
